@@ -34,7 +34,7 @@ Console.Clear();
                 }
             }
         }
-        
+        // добавить чек в случае отсутствия четных или нечетных чисел (ошибка деления на ноль)
         double AverArr (int[] arr) {
             int sum = 0, count = 0;
             for (int i = 0; i < arr.Length; i++) {
@@ -57,4 +57,4 @@ Console.Clear();
         Console.WriteLine();
         Console.WriteLine(AverArr(arrayEvenInt));
         Console.WriteLine(AverArr(arrayNotEvenInt));
-        Console.WriteLine(AverArr(arrayEvenInt) > AverArr(arrayNotEvenInt) ? "Even" : "NoEven");
+        Console.WriteLine(AverArr(arrayEvenInt) > AverArr(arrayNotEvenInt) ? "Even" : "NoEven"); //а если будет равно?
