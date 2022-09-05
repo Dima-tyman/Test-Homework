@@ -19,8 +19,8 @@
                 Console.Write($"{arr[i]} ");
             }
         }
-        
-        void CheckAverEvenInt(int[] arr) {
+        // добавить чек в случае отсутствия четных или нечетных чисел (ошибка деления на ноль)
+        void CheckAverEvenInt(int[] arr) { 
             int iEven = 0, iNoEven = 0, sumEven = 0, sumNoEven = 0;
             for (int i = 0; i < arr.Length; i++) {
                 if (arr[i] % 2 == 0) {
@@ -31,9 +31,9 @@
                     iNoEven++;
                 }
             }
-            double averEven = sumEven / iEven;
-            double averNoEven = sumNoEven / iNoEven;
-            Console.WriteLine(averEven > averNoEven ? "Even" : "NoEven");
+            int averEven = sumEven / iEven;
+            int averNoEven = sumNoEven / iNoEven;
+            Console.WriteLine(averEven == averNoEven ? "=" : averEven > averNoEven ? "Even" : "NoEven");
         }
         
         FillArray(array);
